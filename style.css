@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: #faf9f9;
+
+
+}
+
+
+
+
+
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3b0225 ;
+    padding: 15px;
+    width: 100%;
+    z-index: 0;
+    text-align: center;
+
+    background-image: url("imagen/th.jpg");
+
+}
+
+.fa-lightbulb {
+    color: #e4c414;
+}
+
+.change-button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.change-button {
+    border: none;
+    background-color: #205bf1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#light-mode-button {
+    background-color: #86a5f1;
+}
+
+#dark-mode-button {
+    background-color: #090352;
+}
+
+
+
+/* main */
+
+
+
+
+main {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.meme-editor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meme-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.meme-img {
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-fit: fill;
+    flex-grow: 1;
+}
+
+.meme-box-text {
+    width: 100%;
+    background-color: white;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 25px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.download-button {
+    background-color: rgb(61, 33, 219);
+    color:white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 200px;
+}
+
+
+.fa-download {
+    color:white;
+}
+
+
+
+
+
+
+
+

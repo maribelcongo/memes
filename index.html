@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <title>Editor de memes</title>
+</head>
+<body>
+    <header>
+    <!------------------------------------------ MENU PRINCIPAL --------------------------------------------------->
+        <h1>GENERADOR DE MEMES</h1>
+        <div class="button-container">
+            <button class="change-button" id="img-button"><i class="fas fa-file-image" aria-hidden="true"></i></i>Imagen</button>
+            <button class="change-button" id="text-button"><i class="fas fa-font" aria-hidden="true"></i>Texto</button>
+            <button class="change-button dark-mode-header" id="light-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo claro</button>
+            <button class="change-button disappear" id="dark-mode-button"><i class="fas fa-lightbulb" aria-hidden="true"></i>Modo oscuro</button>
+        </div>
+    </header>
+<!-- ---------------------------------------------------------fin de menu principal--------------------------------------- -->
+
+
+<!------------------------------------------- AREA DE TRABAJO/CREACION DE MEME------------------------------------------------->
+<main>
+    <div class="meme-editor-container">
+        
+            <div class="meme-box" id= "meme-box" aria-label="area de trabajo para edición de memes">
+                <p  class="meme-box-text" id="top-text-in-memebox" aria-label="texto superior">TOP TEXT</p>
+                <div src="" class="meme-img" id="meme-img" aria-label="imagen del meme"></div>
+                <p class="meme-box-text" id= "bottom-text-in-memebox" aria-label="texto inferior">BOTTOM TEXT</p>
+            </div>
+            <button class="download-button"><i class="fas fa-download" aria-hidden="true"></i>Descargá tu meme</button>
+    </div>
+</main>
