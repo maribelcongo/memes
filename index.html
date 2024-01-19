@@ -37,3 +37,171 @@
             <button class="download-button"><i class="fas fa-download" aria-hidden="true"></i>Descargá tu meme</button>
     </div>
 </main>
+
+<!-------------------------------------------- PANELES IMAGEN Y TEXTO ----------------------------------------->
+<aside class='side-panel' id="aside-panel">
+    <button class="img-panel-close button-x" id="panel-close" role="button" aria-label="cerrar">
+        <i class="fas fa-times"></i>
+    </button>
+    
+     <!------------------------------------------- PANEL IMAGEN --------------------------------------------------->
+     <div class="edit-box">
+        <section class="img-panel panel" aria-label="panel de edición de imagen">                
+            <h2 id="img-title">IMAGEN</h2>
+            <div class="option-panel">
+                <h3 id="url-title">URL</h3>
+                <input type="url" id="url-input" aria-label="input para URL">
+            </div>
+
+            <!----------------------------------- OPCIONES FONDO -------------------------------------------->
+            <div class="option-panel">
+                <h3 id="background-img-title">FONDO</h3>
+                <div class="color-panel-text">
+                    <div class="column-elements">
+                        <label for="color-background" class="input-color">
+                            <input type="color" id="color-background" name="color-background" value="#FFFFFF" aria-label="selección de color de fondo">
+                            <span id="input-background-image" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                    <div class="column-elements">
+                        <select name="background-choices" id="select-background" aria-label="selección de modo de fusión de fondo">
+                            <option value="unset">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------------------------- OPCIONES FILTRO------------------------------------------->            
+            <div class="option-panel filter-panel">
+                <h3 id="filter-title">FILTROS</h3>
+                <label class="label-filter" for="brightness">BRILLO
+                    <input type="range" name="brightness" id="brightness" class="input-filter" min="0" max="1" step="0.1" value="1">
+                </label>
+                <label class="label-filter" for="opacity">OPACIDAD
+                    <input type="range" name="opacity" id="opacity" class="input-filter" min="0" max="1" step="0.1" value="1">
+                </label>
+                <label class="label-filter" for="contrast">CONTRASTE
+                    <input type="range" name="contrast" id="contrast" class="input-filter" min="100" max="1000" step="1" value="100">
+                </label>
+                <label class="label-filter" for="blur">DESENFOQUE
+                    <input type="range" name="blur" id="blur" class="input-filter" min="0" max="10" step="0.1" value="0">
+                </label>
+                <label class="label-filter" for="grayscale">ESCALA DE GRISES
+                    <input type="range" name="grayscale" id="grayscale" class="input-filter" min="0" max="100" step="1" value="0">
+                </label>
+                <label class="label-filter" for="sepia">SEPIA
+                    <input type="range" name="sepia" id="sepia" class="input-filter" min="0" max="100" step="1" value="0">
+                </label>
+                <label class="label-filter" for="hue">HUE
+                    <input type="range" name="hue" id="hue" class="input-filter" min="0" max="359" step="1" value="0">
+                </label>
+                <label class="label-filter" for="saturate">SATURADO
+                    <input type="range" name="saturate" id="saturate" class="input-filter" min="100" max="1000" step="10" value="100">
+                </label>
+                <label class="label-filter" for="invert">NEGATIVO
+                    <input type="range" name="invert" id="invert" class="input-filter" min="0" max="1" step="0.1" value="0">
+                </label>
+                <button class="filter-button">Restablecer filtros</button>
+            </div>
+        </section> 
+
+
+        <section class = "panel" id="text-panel" aria-label="panel de edición de texto">
+            <h2 id="text-title">TEXTO</h2>
+            <div class= "option-panel">
+                <h3 id="top-text-title">SUPERIOR</h3>
+                <textarea id="top-text-input" aria-label="input para texto superior">TOP TEXT</textarea>
+                <label class="row-elements" for="hide-top-text"><input type="checkbox" name="hide-top-text" id="hide-top-text">Sin texto superior</label>
+            </div>
+
+            <!-------------------------------INPUTS TEXTO SUPERIOR E INFERIOR------------------------------->
+            <div class= "option-panel">
+                <h3 id="bottom-text-title">INFERIOR</h3>
+                <textarea id="bottom-text-input" aria-label="input para texto inferior">BOTTOM TEXT</textarea>
+                <label class="row-elements" for="hide-bottom-text"><input type="checkbox" name="hide-bottom-text" id="hide-bottom-text">Sin texto inferior</label>
+            </div>
+
+            <!-------------------------------OPCIONES TIPO Y TAMAÑO DE FUENTE--------------------------------->
+            <div class="option-panel">
+                <h3 id="font-title">FUENTE</h3>
+                <select name="font-choices" id="select-font" aria-label="selección de tipo de fuente">
+                    <option value="Arial, Helvetica, sans-serif">Arial</option>
+                    <option value="'Anton', sans-serif">Anton</option>
+                    <option value="'Zen Tokyo Zoo', cursive">Zen Tokyo Zoo</option>
+                    <option value="'Indie Flower', cursive">Indie Flower</option>
+                    <option value="'Courier New', Courier, monospace">Courier New</option>
+                    <option value="'Lobster', cursive">Lobster</option>
+                    <option value="'Otomanopee One', sans-serif">Otomanopee One</option>
+                    <option value="'Special Elite', cursive">Special Elite</option>
+                    <option value="'Times New Roman', Times, serif">Times New Roman</option>                        
+                </select>
+                <div class="row-elements">
+                    <input  class= "font-number-container" type="number" name= "font-size" id="font-size-input" value="40" min="12" max="100" aria-label="tamaño de fuente">
+                    <button class="text-align-button" id="text-align-left" aria-label="alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                    <button class="text-align-button" id="text-align-center" aria-label="centrar texto"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                    <button class="text-align-button" id="text-align-right" aria-label="alinear texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+
+            <!---------------------------------OPCIONES COLOR DE TEXTO Y DE FONDO DE TEXTO------------------->
+            <div class="option-panel">
+                <div class="color-panel-text">
+                    <div class="column-elements">
+                        <h3 id="text-color-title">COLOR</h3>
+                        <label class="input-color" for="font-color-input">
+                            <input type="color" name="font-color" id="font-color-input" value="#000000" aria-label="selección de color de texto">
+                            <span id="input-font-color-text-span" aria-hidden="true"></span> 
+                        </label>
+                    </div>
+                    <div class="column-elements">
+                        <h3 id="text-background-title">FONDO</h3>
+                        <label class="input-color">
+                            <input type="color" name="text-background" id="text-background-input" value="#ffffff" aria-label="selección de color de fondo de texto">
+                            <span id="input-background-text" aria-hidden="true"></span>  
+                        </label>
+                    </div>
+                </div>
+                <label class ="row-elements" for="transparent-background-checkbox"><input type="checkbox" name="transparent-background" id="transparent-background-checkbox">Fondo transparente</label>
+            </div>
+
+            <!-----------------------------OPCIONES CONTORNO DE TEXTO----------------------------------------->
+            <div class="option-panel">
+                <h3 id="text-outline-title">CONTORNO</h3>
+                <div class="outline-buttons">
+                    <button class="contorno-button" id="button-no-outline" aria-label="opción de contorno de texto: ninguno">Ninguno</button>
+                    <button class="contorno-button" id="button-light-outline" aria-label="opción de contorno de texto: claro">Claro</button>
+                    <button class="contorno-button" id="button-dark-outline" aria-label="opción de contorno de texto: oscuro">Oscuro</button>
+                </div>
+            </div>
+
+            <!-------------------------------INPUT ESPACIADO DE TEXTO------------------------------------------->
+            <div class="option-panel">
+                <h3 id="padding-title">ESPACIADO</h3>
+                <input type="number" id="padding-input" value="25" min="10" max="50" aria-label="input de valor de espaciado">
+            </div>
+
+            <!-------------------------------------OPCIONES INTERLINEADO--------------------------------------->
+            <div class="option-panel">
+                <h3 id="line-spacing-title">INTERLINEADO</h3>
+                <select name="spaceline-input" id="spaceline-input" aria-label="selección de valor de interlineado">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            <div>
+        </section>
+    </div>
+</aside>
+<script src="main.js"></script>
+</body>
+</html>
+
+

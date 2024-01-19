@@ -122,10 +122,381 @@ main {
     color:white;
 }
 
+/* aside */
 
 
+aside {
+    background-color: #191e2b;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: -100%;
+    right: 0;
+    z-index: 2;
+    transition: 0.9s;
+}
+
+aside button {
+    background-color: #393e49;
+    border: none;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.button-x {
+    width: 20px;
+    height: 20px;
+    background-color:#191e2b;
+    display: none;
+    position: fixed;
+    left: 97%;
+    top: 1%;
+}
+
+.outline-buttons {
+    display: flex;
+}
+
+.contorno-button {
+    padding: 8px;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
+.option-panel {
+    margin-bottom: 25px;
+}
+
+.row-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.text-align-button {
+    margin-left: 5px;
+}
+
+.filter-button {
+    padding: 10px;
+    margin: 10px 0;
+    
+}
+
+.font-number-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.column-elements {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 9px;
+    width: 48%;
+}
+
+.color-panel-text {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.transparent-background {
+    background-color: transparent;
+}
+
+.menu-text {
+    top: -100%;
+    bottom: 0;
+    transition: 0.9s;
+}
+
+label {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.label-filter {
+    margin: 15px 0;
+}
+
+input, select, textarea {
+    background-color: #393e49;
+    border:none;
+    border-radius: 3px;
+    height: 25px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 5px;
+    height: 36px;
+}
+
+#select-background {
+    margin: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 30px;
+    padding: 6px;
+    margin-bottom: 8px;
+}
+
+.input-color {
+    display: flex;
+    height: 36px;
+    flex-direction: row;
+    align-items: center;
+    background-color: #393e49;
+    padding: 0 2px;
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 100%;
+}
+
+input[type="range"] {
+    height: 6px;
+    border-radius: 10px;
+    margin: 10px 0;
+    background-color: #5a5d68;
+    appearance: none;
+    width:215px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #e0e0e0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="url"] {
+    width:100%;
+}
+
+input[type="checkbox"] {
+    height: 15px;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
+input[type="color"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 50%;
+}
+
+button:hover, button:focus, #light-mode-button:hover, #light-mode-button:focus, input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus {
+    background-color: #4e5565;
+}
+
+input[type="range"]:focus {
+    background-color: #9e9e9e
+}
+
+input[type="range"]:hover {
+    background-color: #e0e0e0;
+}
+
+input[type="color"]:hover {
+    background-color: #393e49
+}
 
 
+/*------------------------------------CLASES ESPECIALES PARA JS----------------------------------------------*/
 
+.disappear {
+    display: none;
+}
+
+/*---------------------------------------------------MODO CLARO-----------------------------------------------*/
+
+body.light-mode {
+    background-color: #eeeeee
+}
+
+body.light-mode h1, body.light-mode h2, body.light-mode i {
+    color: #494949;
+}
+
+body.light-mode .fa-download {
+    color: #ffffff
+}
+
+body.light-mode h3, body.light-mode label {
+    color:#696969
+}
+
+body.light-mode header {
+    background-color: #d3d3d3
+}
+
+body.light-mode aside {
+    background-color: #fafafa;
+}
+
+body.light-mode aside div {
+    background-color: #fafafa;
+}
+
+body.light-mode aside section {
+    background-color: #fafafa;
+}
+
+body.light-mode header button {
+    background-color: #d3d3d3;
+    color: #494949
+}
+
+body.light-mode input, body.light-mode select, body.light-mode textarea, body.light-mode .panel button, body.light-mode .input-color, body.light-mode .input-color span, body.light-mode .button-x {
+    background-color: #e0e0e0;
+    color: #494949
+}
+
+body.light-mode input[type="range"]::-webkit-slider-thumb {
+    background-color:  #5a5d68;
+}
+
+body.light-mode input[type="range"] {
+    background-color: #5a5d68;
+}
+
+body.light-mode button:hover, body.light-mode button:focus, #dark-mode-button:hover, #dark-mode-button:focus, body.light-mode input:not(.input-filter):hover, body.light-mode input:focus, body.light-mode select:hover, body.light-mode select:focus, body.light-mode textarea:hover, body.light-mode textarea:focus {
+    background-color: #bdbdbd
+}
+
+body.light-mode input[type="range"]:focus {
+    background-color: #9e9e9e;
+}
+
+body.light-mode input[type="color"]:hover {
+    background-color: #e0e0e0
+}
+
+/* --------------------------------------------------RESPONSIVE--------------------------------------------------- */
+
+
+/*------------------------------------------------BREAKPOINT 1100PX----------------------------------------------*/
+@media(max-width: 1100px) {
+
+    aside {
+        display: none;
+    }
+
+    .button-x {
+        display: block;   
+    }
+
+    .meme-box-text {
+        padding: 5% 0;
+    }
+
+}
+ 
+/*---------------------------------------------BREAKPOINT 700PX --------------------------------------------------*/
+@media(max-width: 700px) {
+
+    header {
+        height: 15vh;
+    }
+
+    main {
+        height: 95vh;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/*---------------------------------------------BREAKPOINT 700PX --------------------------------------------------*/
+@media(max-width: 600px){
+
+    .meme-box {
+       width: 90vw;
+    }
+
+    .meme-box-text {
+        font-size: 6vw;
+    }
+
+    .button-x {
+        left: 95%;
+    }
+
+    main {
+        height: 85vh;
+    }
+
+    body {
+        overflow: hidden;
+    }
+}
+
+/*---------------------------------------------BREAKPOINT 400PX --------------------------------------------------*/
+@media(max-width: 400px) {
+
+    header {
+        height: auto;
+    }
+
+    .change-button-container {
+        justify-content: center;
+    }
+
+    .button-x {
+        left: 93%;
+    }
+
+    aside {
+        width: 100vw;
+    }
+
+    .panel {
+        max-width: 100%;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+
+    .filter-button {
+        margin: 0 25%;
+    }
+
+    .outline-buttons {
+        justify-content: space-evenly;
+    }
+}  
 
 
